@@ -1,0 +1,55 @@
+###
+### A complete description of a Prefect Deployment for flow 'web-to-gcs'
+###
+name: Move data from web to Google Cloud Storage
+description: null
+version: 96fe737a4545f815403cbb253e7c43f3
+# The work queue that will handle this deployment's runs
+work_queue_name: default
+work_pool_name: null
+tags: []
+parameters: {color: "green", year: 2020, month: 1}
+schedule: null
+is_schedule_active: null
+infra_overrides: {}
+infrastructure:
+  type: process
+  env: {}
+  labels: {}
+  name: null
+  command: null
+  stream_output: true
+  working_dir: null
+  block_type_slug: process
+  _block_type_slug: process
+
+###
+### DO NOT EDIT BELOW THIS LINE
+###
+flow_name: web-to-gcs
+manifest_path: null
+storage: null
+path: /home/andrew/Main/Helium10/Prefect-ETL
+entrypoint: flows/web_to_gcs__flow.py:web_to_gcs
+parameter_openapi_schema:
+  title: Parameters
+  type: object
+  properties:
+    color:
+      title: color
+      default: green
+      position: 0
+      type: string
+    year:
+      title: year
+      default: 2020
+      position: 1
+      type: integer
+    month:
+      title: month
+      default: 1
+      position: 2
+      type: integer
+  required: null
+  definitions: null
+timestamp: '2023-02-05T08:09:12.919880+00:00'
